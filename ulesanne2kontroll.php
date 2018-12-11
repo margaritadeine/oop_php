@@ -5,7 +5,8 @@
  * Date: 11.12.2018
  * Time: 10:37
  */
-echo '<html><head><title>Ülesanded</title></head><body>';
+echo '<html><head><title>Ülesanded</title>
+<link rel="stylesheet" type="text/css" href="katsestyle.css"></head><body>';
 //Ülesanne 2
 /* Loo muutuja nimega varv, mille algväärtuseks pane 'punane';
 Koosta if-else if- else lause, mis väljastab teksti "Värviline tekst"
@@ -23,5 +24,22 @@ if($varv == 'punane'){
     echo '<p style="color: orange;">Värviline tekst</p>';
 } else {
     echo '<p>Värviline tekst</p>';
+
+    echo '<hr>';
+    echo '<h4>Ülesanne 3</h4>';
+    echo '<table>';
+    $ridadeArv = 6;
+    $veergudeArv = 5;
+    for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
+        echo '<tr>';
+        for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
+            $varv = '#'.$reaNumber.$veeruNumber.$reaNumber.$veeruNumber.$reaNumber.$veeruNumber;
+            echo '<td style="background-color: '.$varv.'">';
+            echo $veeruNumber;
+            echo '</td>';
+        }
+        echo '</tr>';
+    }
+    echo '</table>';
 }
 echo '</body></html>';

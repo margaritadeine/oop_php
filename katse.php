@@ -24,12 +24,15 @@ echo '<!doctype html><html><head>
 
 
 echo '<table>';
-$ridadeArv = 4;
+$ridadeArv = 6;
+$veergudeArv = 5;
 for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
     echo '<tr>';
-    echo '<td>';
-    echo $reaNumber;
-    echo '</td>';
+    for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
+        echo '<td>';
+        echo $veeruNumber;
+        echo '</td>';
+    }
     echo '</tr>';
 }
 echo '</table>';
