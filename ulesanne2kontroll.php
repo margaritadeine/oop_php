@@ -24,4 +24,4 @@ if($varv == 'punane'){
 } else {
     echo '<p>Värviline tekst</p>';
 }
-echo '</body></html>'; 
+echo '</body></html>';
