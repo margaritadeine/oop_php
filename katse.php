@@ -9,8 +9,11 @@
 
 
 
-echo '
-    <!doctype html><html> <head> <title>'.$lehePealkiri.'</title></head><body>';
+echo '<!doctype html><html><head>
+<title>Tsüklid</title>
+<link rel="stylesheet" type="text/css" href="katsestyle.css">
+</head><body>';
+
   //tsüklid
 //for
 /*
@@ -20,11 +23,11 @@ echo '
  */
 
 
-echo '<table style="border: 1px solid black; border-collapse: collapse; width: 300px;">';
+echo '<table>';
 $ridadeArv = 4;
 for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
-    echo '<tr style="border: 1px solid black;">';
-    echo '<td style="text-align: center">';
+    echo '<tr>';
+    echo '<td>';
     echo $reaNumber;
     echo '</td>';
     echo '</tr>';
