@@ -25,8 +25,8 @@ echo '<hr>';
 //loome htmlTabel objekti
 $htmlTabel = new htmlTabel();
 //lisame read sisuga
-$hmtlTabel->lisaRida(array(1,2,3));
-$hmtlTabel->lisaRida(array(4,5,6));
-$hmtlTabel->lisaRida(array(7,8,9));
+$htmlTabel->lisaRida(array(1,2,3));
+$htmlTabel->lisaRida(array(4,5,6));
+$htmlTabel->lisaRida(array(7,8,9));
 //väljastame tabel
 $htmlTabel->naitaTabel();
