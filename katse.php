@@ -28,7 +28,8 @@ echo '<pre>';
 print_r($numbrid);
 echo '</pre>';
 //massiivi elemendi väljastamine
-echo $numbrid[1][1];
+echo 'massiivi element [1][1] = '.$numbrid[1][1];
+echo '<br>';
 //massiivi suuruse kontroll - meil on ridade arv
 $ridadeArv = count($numbrid);
 echo $ridadeArv;
@@ -47,7 +48,13 @@ for ($reaNumber = 0; $reaNumber < $ridadeArv; $reaNumber++){
     echo '<br>';
 }
 
-
+// massiivi väljastamine foreach abil
+foreach ($numbrid as $rida) {
+  foreach ($rida as $number){
+      echo $number.'&nbsp';
+  }
+  echo '<br>';
+}
 
 
 
