@@ -12,6 +12,11 @@ require_once './Tabel.php';
 
 //loome tabeli objekt
 $lihtTabel = new Tabel();
+var_dump($lihtTabel);
+echo '<pre>';
+print_r($lihtTabel);
+echo '<pre>';
+
 //lihtTabelile lisame read sisuga
 $lihtTabel->lisaRida(array(1,2,3));
 $lihtTabel->lisaRida(array(4,5,6));
