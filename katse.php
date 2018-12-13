@@ -6,29 +6,40 @@
  * Time: 11:08
  */
 
-
+//massiivid
+//array()
 
 
 /*
- function funktsiooniNimi ([$param1, ..., $paramN]){
-kõik, tegevused,
-mis antud funktsiooni sees toimuvad
-}
+ *
+$massiiv = array(); //tühi massiiv - ei ole sees midagi
+$massiiv [] = väärtus;
  */
+$nimed = array();
+$nimed[] = 'Anna';
+$nimed[] = 'Elen';
+var_dump($nimed);
+echo '<pre>';
+print_r($nimed);
+echo '<pre>';
 
-function htmlTabel($ridadeArv, $veergudeArv){
-echo '<table>';
+
+
+
+function htmlTabel($ridadeArv = 0, $veergudeArv =0){
+    $tabel = '<table>';
 
 for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
-    echo '<tr>';
+      $tabel = $tabel. '<tr>';
     for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
-        echo '<td>';
-        echo $veeruNumber;
-        echo '</td>';
+        $tabel = $tabel. '<td>';
+        $tabel = $tabel.$veeruNumber;
+        $tabel = $tabel.'</td>';
     }
-    echo '</tr>';
+    $tabel = $tabel.'</tr>';
 }
-echo '</table>';
+    $tabel = $tabel.'</table>';
+    return   $tabel;
 }
 //lehe sisu väljastamine
 echo '<!doctype html><html><head>
@@ -36,8 +47,13 @@ echo '<!doctype html><html><head>
 <link rel="stylesheet" type="text/css" href="katsestyle.css">
 </head><body>';
 //kutsume funktsiooni tööle
-htmlTabel(4, 4);
+$tabel1 = htmlTabel(4, 4);
+echo $tabel1;
+echo '<hr>';
+$tabel2 = htmlTabel(2, 5);
+echo $tabel2;
 echo  '<hr>';
-htmlTabel(2, 5);
+$tabel3 = htmlTabel(1, 3);
+echo $tabel3;
 echo '</body></html>';
 ?>
