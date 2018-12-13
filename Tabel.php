@@ -27,7 +27,7 @@ class Tabel
     function naitaTabel(){
         foreach ($this->tabel as $rida){
             foreach ($rida as $element){
-                echo $element.'<&nbsp';
+                echo $element.'&nbsp;';
             }
             echo '<br>';
         }
