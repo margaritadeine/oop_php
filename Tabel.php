@@ -10,6 +10,14 @@ class Tabel
 {
     //antud omadused
     var $tabel = array();
+
+    /**
+     * Tabel constructor.
+     */
+    public function __construct()
+    {
+        echo 'Tabel tüübi objekt on loodud<br>';
+    }
     //klassi meetodid
 
     /**
