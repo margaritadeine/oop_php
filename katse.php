@@ -16,10 +16,9 @@ mis antud funktsiooni sees toimuvad
 }
  */
 
-function htmlTabel(){
+function htmlTabel($ridadeArv, $veergudeArv){
 echo '<table>';
-$ridadeArv = 6;
-$veergudeArv = 5;
+
 for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
     echo '<tr>';
     for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
@@ -37,6 +36,8 @@ echo '<!doctype html><html><head>
 <link rel="stylesheet" type="text/css" href="katsestyle.css">
 </head><body>';
 //kutsume funktsiooni tööle
-htmlTabel();
+htmlTabel(4, 4);
+echo  '<hr>';
+htmlTabel(2, 5);
 echo '</body></html>';
 ?>
