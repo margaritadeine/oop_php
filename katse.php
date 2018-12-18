@@ -16,23 +16,30 @@ $massiiv = array(); //tühi massiiv - ei ole sees midagi
 $massiiv [] = väärtus;
  */
 function valjastaInfo($massiiv){
-    foreach ($massiiv as $elemendiNimi=>$elemendiVaartus){
-        echo $elemendiNimi.' - '.$elemendiVaartus.'<br>';
+    foreach ($massiiv as $alammassiivNimi =>$alamMassiivAndmed) {
+        echo '<h5>'.$alammassiivNimi.'</h5><br>';
+        foreach ($alamMassiivAndmed as $elemendiNimi => $elemendiVaartus) {
+            echo $elemendiNimi . ' - ' . $elemendiVaartus . '<br>';
+        }
+        echo '<hr>';
     }
 }
 
 //massiivi loomine
-$porsasPeppa = array(
+$perekondPeppa = array(
+    array(
     'nimi' => 'Peppa',
     'amet' => 'porsas',
     'vanus' => 5,
     'sugu' => 'naine'
-);
-$porsasGeorge = array(
+),
+    array(
     'nimi' => 'Peppa',
     'amet' => 'porsas',
     'vanus' => 2,
     'sugu' => 'mees'
+)
+
 );
 
 
@@ -42,8 +49,7 @@ echo '<!doctype html><html><head>
 <link rel="stylesheet" type="text/css" href="katsestyle.css">
 </head><body>';
 //kutsume funktsiooni tööle
-valjastaInfo($porsasPeppa);
-valjastaInfo($porsasGerge);
+valjastaInfo($perekondPeppa);
 
 echo '</body></html>';
 ?>
