@@ -30,3 +30,5 @@ $htmlTabel->lisaRida(array(4,5,6));
 $htmlTabel->lisaRida(array(7,8,9));
 //väljastame tabel
 $htmlTabel->naitaTabel();
+echo '<hr>';
+

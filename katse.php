@@ -15,77 +15,35 @@
 $massiiv = array(); //tühi massiiv - ei ole sees midagi
 $massiiv [] = väärtus;
  */
+function valjastaInfo($massiiv){
+    foreach ($massiiv as $elemendiNimi=>$elemendiVaartus){
+        echo $elemendiNimi.' - '.$elemendiVaartus.'<br>';
+    }
+}
 
 //massiivi loomine
-$numbrid = array(
-        array(1, 2, 3),
-        array(4, 5, 6),
-
+$porsasPeppa = array(
+    'nimi' => 'Peppa',
+    'amet' => 'porsas',
+    'vanus' => 5,
+    'sugu' => 'naine'
 );
-//massiiivi sisu test kontroll
-var_dump($numbrid);
-echo '<pre>';
-print_r($numbrid);
-echo '</pre>';
-//massiivi elemendi väljastamine
-echo 'massiivi element [1][1] = '.$numbrid[1][1];
-echo '<br>';
-//massiivi suuruse kontroll - meil on ridade arv
-$ridadeArv = count($numbrid);
-echo $ridadeArv;
-echo '<br>';
-//veergudeArv
-$veergudeArv =count($numbrid[0]);
-echo $veergudeArv;
-echo '<br>';
-
-//massiivi väljastamine for abil
-
-for ($reaNumber = 0; $reaNumber < $ridadeArv; $reaNumber++){
-    for($veeruNumber = 0; $veeruNumber < $veergudeArv; $veeruNumber++){
-        echo $numbrid[$reaNumber][$veeruNumber].'&nbsp';
-    }
-    echo '<br>';
-}
-
-// massiivi väljastamine foreach abil
-foreach ($numbrid as $rida) {
-  foreach ($rida as $number){
-      echo $number.'&nbsp';
-  }
-  echo '<br>';
-}
+$porsasGeorge = array(
+    'nimi' => 'Peppa',
+    'amet' => 'porsas',
+    'vanus' => 2,
+    'sugu' => 'mees'
+);
 
 
-
-function htmlTabel($ridadeArv = 0, $veergudeArv =0){
-    $tabel = '<table>';
-
-for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
-      $tabel = $tabel. '<tr>';
-    for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
-        $tabel = $tabel. '<td>';
-        $tabel = $tabel.$veeruNumber;
-        $tabel = $tabel.'</td>';
-    }
-    $tabel = $tabel.'</tr>';
-}
-    $tabel = $tabel.'</table>';
-    return   $tabel;
-}
 //lehe sisu väljastamine
 echo '<!doctype html><html><head>
 <title>Funktsioonid</title>
 <link rel="stylesheet" type="text/css" href="katsestyle.css">
 </head><body>';
 //kutsume funktsiooni tööle
-$tabel1 = htmlTabel(4, 4);
-echo $tabel1;
-echo '<hr>';
-$tabel2 = htmlTabel(2, 5);
-echo $tabel2;
-echo  '<hr>';
-$tabel3 = htmlTabel(1, 3);
-echo $tabel3;
+valjastaInfo($porsasPeppa);
+valjastaInfo($porsasGerge);
+
 echo '</body></html>';
 ?>

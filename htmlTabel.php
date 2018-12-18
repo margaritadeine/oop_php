@@ -25,7 +25,7 @@ class htmlTabel extends Tabel
      */
     function naitaTabel()
     {
-       echo '<tabel>';
+       echo '<tabel border="1">';
        foreach ($this->tabel as $rida){
            echo '<tr>';
            foreach ($rida as $element){
