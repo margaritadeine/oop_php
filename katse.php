@@ -35,34 +35,42 @@ function valjastaInfo($massiiv){
         echo '<hr>';
     }
 }
+function suguVordlus($porsas1, $porsas2){
+    if ($porsas1['sugu'] == $porsas2['sugu']) {
+        return 0; }
+    return ($porsas1['sugu'] < $porsas2['sugu']) ? -1 : 1;
+}
+function sortSooJargi($perekond){
+    usort($perekond, 'suguVordlus');
+}
 
 //massiivi loomine
 $perekondPeppa = array(
     'Peppa'=>
         array(
     'nimi' => 'Peppa',
-    'amet' => 'porsas',
+    'amet' => 'porsaslaps',
     'vanus' => 5,
     'sugu' => 'naine'
 ),
     'George' =>
         array(
-    'nimi' => 'Peppa',
-    'amet' => 'porsas',
+    'nimi' => 'George',
+    'amet' => 'porsaslaps',
     'vanus' => 2,
     'sugu' => 'mees'
 ),
-    'Ema'=>
+    'Põrsas Ema'=>
         array(
-            'nimi' => 'Peppa',
-            'amet' => 'porsas',
+            'nimi' => 'Ema Põrsas',
+            'amet' => 'porsasema',
             'vanus' => 35,
             'sugu' => 'naine'
         ),
-    'Isa' =>
+    'Põrsas Isa' =>
         array(
-            'nimi' => 'Peppa',
-            'amet' => 'porsas',
+            'nimi' => 'Isa Põrsas',
+            'amet' => 'porsasisa',
             'vanus' => 40,
             'sugu' => 'mees'
         )
@@ -70,6 +78,10 @@ $perekondPeppa = array(
 
 );
 
+//sort($perekondPeppa);
+//asort($perekondPeppa);
+//ksort($perekondPeppa);
+sortSooJargi($perekondPeppa);
 
 //lehe sisu väljastamine
 echo '<!doctype html><html><head>
@@ -78,6 +90,7 @@ echo '<!doctype html><html><head>
 </head><body>';
 //kutsume funktsiooni tööle
 valjastaInfo($perekondPeppa);
+
 
 echo '</body></html>';
 ?>
