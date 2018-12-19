@@ -6,6 +6,9 @@
  * Time: 10:43
  */
 
-echo $_POST['username'];
-echo '<br>';
-echo $_POST['passwd'];
+if(empty($_POST)){
+    header('Location: login.php');
+}
+if(empty($_POST['username']) or empty($_POST['passwd'])){
+    header('Location: login.php');
+}
