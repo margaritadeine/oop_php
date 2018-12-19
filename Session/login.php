@@ -1,4 +1,9 @@
 <?php
+
+session_start(); //alustame ananüümse sessiooniga
+echo '<div style="color: red">'.$_SESSION['viga'].'</div>';
+
+
 /**
  * Created by PhpStorm.
  * User: margarita.deinekina

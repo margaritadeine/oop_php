@@ -6,9 +6,21 @@
  * Time: 10:43
  */
 
+
+session_start(); //jätkame login.php faili sessiooni
+
 if(empty($_POST)){
     header('Location: login.php');
+    $_SESSION['viga'] ='Täida vormi andmed';
 }
-if(empty($_POST['username']) or empty($_POST['passwd'])){
+else if(empty($_POST['username'])){
     header('Location: login.php');
+    $_SESSION['viga'] = 'Sisesta kasutaja nimi';
+} else if(empty($_POST['passwd'])){
+    header('Location: login.php');
+    $_SESSION['viga'] = 'Sisesta parool';
+} else {
+    echo '<pre>';
+    print_r($_SESSION);
+    echo '</pre>';
 }
