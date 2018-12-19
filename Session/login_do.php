@@ -34,5 +34,7 @@ else if(empty($_POST['username'])){
     echo '</pre>';
     echo 'Oled sisse loginud, '.$_SESSION['username'];
     echo'<br>';
+    echo '<a href="test.php">sessiooni katse</a>';
+    echo '<br>';
     echo'<a href="logout.php">Logi välja</a>';
 }

@@ -18,8 +18,8 @@ echo '<div style="color: red">'.$_SESSION['viga'].'</div>';
 
 //trükkime välja vormi
 ?>
-<form>
-    <div method="post" action="login_do.php">
+<form method="post" action="login_do.php">
+    <div>
         <label>Kasutajanimi: </label>
         <input type="text" name="username">
     </div>
